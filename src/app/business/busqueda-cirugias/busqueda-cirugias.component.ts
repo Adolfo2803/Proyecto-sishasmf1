@@ -20,7 +20,6 @@ export default class BusquedaCirugiasComponent {
       table: new FormControl('', Validators.required)  // Campo de tabla requerido
     });
   }
-
   onSubmit() {
     if (this.busquedaCForm.valid) {
       console.log('Formulario válido, datos enviados:', this.busquedaCForm.value);

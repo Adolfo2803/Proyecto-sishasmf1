@@ -10,6 +10,10 @@ export const routes: Routes = [
                 loadComponent: () => import('./business/dashboard/dashboard.component')
             },
             {
+                path: 'resgistro_archivo',
+                loadComponent: () => import('./business/archivo-clinic/archivo-clinic.component')
+            },
+            {
                 path: 'cirugias',
                 loadComponent: () => import('./business/cirugias/cirugias.component')
             },

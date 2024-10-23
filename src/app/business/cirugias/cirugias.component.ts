@@ -45,14 +45,19 @@ export default class CirugiasComponent {
   ConfirmarDatos() {
     if (this.cirugiaForm.valid) {
       console.log('Datos del formulario:', this.cirugiaForm.value);
+      
+      // Lógica para agregar el paciente y guardar en sessionStorage
+      this.tablaCirugiasService.agregarPaciente(this.cirugiaForm.value);
+      sessionStorage.setItem('form', JSON.stringify(this.cirugiaForm.value));
+      const formStorage = JSON.parse(sessionStorage.getItem('form')!) as TablaCirugiasService;
+  
       alert('Formulario guardado correctamente!');
+      
+      // Limpiar el formulario
+      this.cirugiaForm.reset();
     } else {
       alert('El formulario no es válido. Por favor, rellena todos los campos requeridos.');
     }
-   this.tablaCirugiasService.agregarPaciente(this.cirugiaForm.value)
-
-  sessionStorage.setItem('form', JSON.stringify(this.cirugiaForm.value));
-  const formStorage = JSON.parse(sessionStorage.getItem('form')!) as TablaCirugiasService; 
   }
 
 }

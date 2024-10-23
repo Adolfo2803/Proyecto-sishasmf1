@@ -120,7 +120,7 @@
       </form>
   
       <!-- Tabla debajo del formulario -->
-      <table class="table mt-4">
+      <!-- <table class="table mt-4">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -146,34 +146,34 @@
         </thead>
         <tbody>
           
-            @for (cirugia of tablaCirugiasService.tabla_cirugias; track $index) {
+            @for (paciente of pacienteService.pacientes; track $index) {
   
               <tr>
-            <th scope="row">{{cirugia.id}}</th>
-            <td>{{cirugia.fechaCirugia}}</td>
-            <td>{{cirugia.numCirugia}}</td>
-            <td>{{cirugia.numExpediente}}</td>
-            <td>{{cirugia.nomPaciente}}</td>
-            <td>{{cirugia.apellidoPPaciente}}</td>
-            <td>{{cirugia.apellidoMPaciente}}</td>
-            <td>{{cirugia.nomCirujano}}</td>
-            <td>{{cirugia.nomAnestesiologo}}</td>
-            <td>{{cirugia.nomResidente}}</td>
-            <td>{{cirugia.nomCirugia}}</td>
-            <td>{{cirugia.nomEnfeInt}}</td>
-            <td>{{cirugia.nomEnfeCir}}</td>
-            <td>{{cirugia.tipoAnes}}</td>
-            <td>{{cirugia.iniciaAnes}}</td>
-            <td>{{cirugia.finAnes}}</td>
-            <td>{{cirugia.medicamento}}</td>
-            <td>{{cirugia.suturas}}</td>
-            <td>{{cirugia.material}}</td>
+            <th scope="row">{{paciente.id}}</th>
+            <td>{{paciente.fechaCirugia}}</td>
+            <td>{{paciente.numCirugia}}</td>
+            <td>{{paciente.numExpediente}}</td>
+            <td>{{paciente.nomPaciente}}</td>
+            <td>{{paciente.apellidoPPaciente}}</td>
+            <td>{{paciente.apellidoMPaciente}}</td>
+            <td>{{paciente.nomCirujano}}</td>
+            <td>{{paciente.nomAnestesiologo}}</td>
+            <td>{{paciente.nomResidente}}</td>
+            <td>{{paciente.nomCirugia}}</td>
+            <td>{{paciente.nomEnfeInt}}</td>
+            <td>{{paciente.nomEnfeCir}}</td>
+            <td>{{paciente.tipoAnes}}</td>
+            <td>{{paciente.iniciaAnes}}</td>
+            <td>{{paciente.finAnes}}</td>
+            <td>{{paciente.medicamento}}</td>
+            <td>{{paciente.suturas}}</td>
+            <td>{{paciente.material}}</td>
   
           </tr>
             }
           
         </tbody>
-      </table>
+      </table> -->
     </div>
   </div>
   

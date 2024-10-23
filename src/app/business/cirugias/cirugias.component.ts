@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { TablaCirugiasService } from './services/tabla-cirugias.service';
 
 @Component({
   selector: 'app-cirugias',
@@ -10,10 +9,6 @@ import { TablaCirugiasService } from './services/tabla-cirugias.service';
   styleUrl: './cirugias.component.css'
 })
 export default class CirugiasComponent {
-
-  constructor(public tablaCirugiasService: TablaCirugiasService){}
-
-
   cirugiaForm: FormGroup = new FormGroup({
     fechaCirugia: new FormControl('', ),
     numCirugia: new FormControl(''),
@@ -45,19 +40,14 @@ export default class CirugiasComponent {
   ConfirmarDatos() {
     if (this.cirugiaForm.valid) {
       console.log('Datos del formulario:', this.cirugiaForm.value);
-      
-      // Lógica para agregar el paciente y guardar en sessionStorage
-      this.tablaCirugiasService.agregarPaciente(this.cirugiaForm.value);
-      sessionStorage.setItem('form', JSON.stringify(this.cirugiaForm.value));
-      const formStorage = JSON.parse(sessionStorage.getItem('form')!) as TablaCirugiasService;
-  
       alert('Formulario guardado correctamente!');
-      
-      // Limpiar el formulario
-      this.cirugiaForm.reset();
     } else {
       alert('El formulario no es válido. Por favor, rellena todos los campos requeridos.');
     }
+   //this.pacienteService.agregarPaciente(this.cirugiaForm.value)
+
+  //  sessionStorage.setItem('form', JSON.stringify(this.cirugiaForm.value));
+  //  const formStorage = JSON.parse(sessionStorage.getItem('form')!) as Paciente; 
   }
 
 }
